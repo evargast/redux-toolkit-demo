@@ -1,56 +1,14 @@
-import {
-    Grid,
-    lightTheme,
-    Provider,
-    repeat,
-    View,
-} from "@adobe/react-spectrum";
-import React, { ComponentProps, FC } from "react";
-
-import "./App.css";
+import { Grid, lightTheme, Provider } from "@adobe/react-spectrum";
+import { SampleForm } from "components/SampleForm";
+import { StateJSON } from "components/StateJSON";
+import React, { FC } from "react";
 
 const App: FC = () => {
-    const baseColors = [
-        "celery",
-        "chartreuse",
-        "yellow",
-        "magenta",
-        "fuchsia",
-        "purple",
-        "indigo",
-        "seafoam",
-        "red",
-        "orange",
-        "green",
-        "blue",
-    ];
-
-    type BackgroundColor = ComponentProps<typeof View>["backgroundColor"];
-    const colors: BackgroundColor[] = [];
-    for (const color of baseColors) {
-        for (let i = 4; i <= 7; i++) {
-            colors.push(`${color}-${i}00` as BackgroundColor);
-        }
-    }
-
     return (
-        <Provider theme={lightTheme} colorScheme={"light"}>
-            <View paddingTop="size-400">
-                <h1 className="App">Welcome to React Spectrum!</h1>
-            </View>
-
-            <Grid
-                columns={repeat("auto-fit", "size-800")}
-                autoRows="size-800"
-                justifyContent="center"
-                gap="size-100"
-                marginX="size-200"
-                marginTop="size-300"
-                marginBottom="size-400"
-            >
-                {colors.map(color => (
-                    <View key={color?.toString()} backgroundColor={color} />
-                ))}
+        <Provider theme={lightTheme} colorScheme={"light"} height="100%">
+            <Grid columns={["1fr", "1fr"]} height="100%">
+                <SampleForm />
+                <StateJSON />
             </Grid>
         </Provider>
     );
