@@ -1,5 +1,5 @@
 {
-    "name": "webpack-react-spectrum",
+    "name": "redux-toolkit-demo",
     "version": "1.0.1",
     "description": "",
     "main": "index.js",
@@ -11,18 +11,12 @@
         "lint:fix": "eslint --fix .",
         "format": "prettier --check \"./**/*.{ts,tsx,js,css,json,md}\"",
         "format:fix": "prettier --write  \"./**/*.{ts,tsx,js,css,json,md}\"",
-        "test": "jest --color --watch",
-        "test:ci": "jest --color --ci",
-        "test:allthethings": "npm run test:ci && echo && npm run lint && echo && npm run format",
-        "storybook": "start-storybook -p 6006 --quiet",
-        "build-storybook": "build-storybook --output-dir storybook",
-        "deploy-storybook": "storybook-to-ghpages --ci --out=storybook",
         "generate": "plop component",
         "g": "plop component"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/evargast/webpack-react-spectrum.git"
+        "url": "git+https://github.com/evargast/redux-toolkit-demo.git"
     },
     "keywords": [],
     "author": {
@@ -31,25 +25,10 @@
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/evargast/webpack-react-spectrum/issues"
+        "url": "https://github.com/evargast/redux-toolkit-demo/issues"
     },
-    "homepage": "https://github.com/evargast/webpack-react-spectrum#readme",
+    "homepage": "https://github.com/evargast/redux-toolkit-demo#readme",
     "devDependencies": {
-        "@storybook/addon-actions": "^6.5.9",
-        "@storybook/addon-controls": "^6.5.9",
-        "@storybook/addon-docs": "^6.5.9",
-        "@storybook/addon-links": "^6.5.9",
-        "@storybook/addons": "^6.5.9",
-        "@storybook/builder-webpack5": "^6.5.9",
-        "@storybook/manager-webpack5": "^6.5.9",
-        "@storybook/react": "^6.5.9",
-        "@storybook/source-loader": "^6.5.9",
-        "@storybook/storybook-deployer": "^2.8.11",
-        "@storybook/theming": "^6.5.9",
-        "@testing-library/dom": "^7.31.2",
-        "@testing-library/jest-dom": "^5.16.4",
-        "@testing-library/react": "^11.2.7",
-        "@testing-library/user-event": "^12.8.3",
         "@types/jest": "^26.0.24",
         "@types/prettier": "^2.6.3",
         "@types/react": "^17.0.47",
@@ -69,6 +48,7 @@
         "eslint-plugin-react": "^7.30.1",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
+        "html-webpack-plugin": "^5.5.0",
         "husky": "^4.3.8",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^26.6.3",

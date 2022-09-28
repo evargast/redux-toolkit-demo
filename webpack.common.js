@@ -54,7 +54,7 @@ module.exports = () => {
         plugins: [
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
-                title: "Spectrum App",
+                title: "redux-toolkit-demo",
                 template: __dirname + "/public/index.html",
                 inject: "body",
                 filename: "index.html",
